@@ -1,34 +1,108 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>Hello World</title>
-		<style>
-			#header{
-				background:url("E:\\H5Project\\FormAuthentication\\img\\sky.jpg");
-				text-align: center;
-				color:lightgreen;
-				height: 20%;
-				padding: 5px;
-			}
-			#bd{
-				text-align: center;
-				background:url("E:\\H5Project\\FormAuthentication\\img\\screen.jpg");
-			}
-			
-		</style>
-	</head>
-	<body id="bd">
-		
-		<div id="header"><h1>学习资料链接</h1></div>
-		<!--
-		<br/><br/><br/><br/><br/><br/>
-		<a href="https://pan.baidu.com/s/1cWeTNTs_NeJFQCnqEJZ1TQ">Java基础 m685</a><br/>
-		<a href="https://pan.baidu.com/s/1T48x5TxBI98ynA6wW1Rp4w">JavaWeb  ault</a><br/>
-		<a href="https://pan.baidu.com/s/1oGZlglRlzhq9PYPqF4EwCw">主流框架  dfz3</a><br/>
-		<a href="https://pan.baidu.com/s/12bKMJpW3AS0F9D4GRMBVJQ ">微服务架构 97at</a><br/>
-		<a href="https://pan.baidu.com/s/1U-s4OmkToXJ5Y7BbJ7w2Ww">互联网生态 j86b</a><br/>
-		<a href="https://pan.baidu.com/s/1T2NUwTBEbpPLbgDRA0UA8A ">大师必备 eczf</a><br/>
-		-->
-	</body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+    <style>
+        *{
+            margin:0px auto;
+            text-align:center;
+        }
+        body{
+            background-image:url(/OnlineTest/img/sakura.jpg);
+            background-size:100%;
+            cursor: default;
+            background-attachment:local;
+
+        }
+        #box img{
+            margin-bottom: -5px;
+            margin-right: 10px;
+            border-radius: 50%;
+            opacity: 0.8;
+        }
+        #box{
+            width:650px;
+            height:350px;
+            background-color:#00000050;
+            margin-top: 220px;
+            cursor: default;
+        }
+        #box h1{
+            font-family: "Arial Black",serif;
+            line-height: 90px;
+            color:skyblue;
+        }
+       .textinput{
+            width: 300px;
+            height:30px;
+            background-color:#ffffff00;
+            border: 0px;
+            border-bottom: 3px #fff solid;
+            margin-bottom: 17px;
+            outline:none;
+            text-align: initial;
+            font-size:20px;
+            color:#fff;
+            padding: 5px 10px;
+        }
+        .framdiv{
+            width:500px;
+            height:18px;
+            font-size:16px;
+            color:skyblue;
+        }
+
+
+        .btn{
+            color:blueviolet;
+            background-color:aquamarine;
+            width:100px;
+            border-radius: 20%;
+            margin-top:-10px;
+            opacity: 0.8;
+        }
+
+        #box div:last-child{
+            width:300px;
+            height:30px;
+            line-height:30px;
+            background-color:#ffffff;
+            border-radius: 17px;
+            margin-top:10px;
+            background-image:linear-gradient(to right,#db3125 0% , #578bc3 100%);
+            color:#fff;
+            font-family: "arial narrow",serif;
+        }
+        #box div:last-child:active{
+            background-image:linear-gradient(to left,#db3125 0% , #578bc3 100%);
+        }
+        .sign{
+            width:200px;
+            height:20px;
+            font-size:15px;
+            color:#ffffff;
+        }
+    </style>
+    <script type="text/html"></script>
+</head>
+
+<body>
+    <div  id="box">
+        <div >
+            <h1>Login</h1></div>
+            <form action="/OnlineTest/Query" method="post" >
+                <div><img src="/OnlineTest/img/UIimg/pic_admin.png" width="20" height="20"><input class="textinput" type="text" name="userName" placeholder="Username"></div>
+                <div><img src="/OnlineTest/img/UIimg/pwd.png" width="20" height="20"><input class="textinput" type="password" name="password" placeholder="Password"/></div>
+                <div class="framdiv"><input type="radio" name="permissions" value="student"/> 学生
+                    <input type="radio" name="permissions" value="administrator"/> 管理员</div>
+
+                <br/>
+                <input type="submit" value="登录" class="btn"/>
+                <div class="sign">还没有账户？<a href="/OnlineTest/UserRigister.html" style="color:chartreuse">注册一个</a></div>
+                <div>@version 0.0.0.1</div>
+        </form>
+
+    </div>
+</body>
 </html>
